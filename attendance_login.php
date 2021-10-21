@@ -13,10 +13,10 @@ if ($conn->connect_error) {
 }
 
 $name = $_POST["name"];
-$pw = $_POST["password"];
+$password = $_POST["password"];
 
 $sql = "INSERT INTO attendance_log (username, password)
-VALUES ('$name', '$pw')";
+VALUES ('$name', '$password')";
 
 // if ($conn->query($sql) === TRUE) {
 //   echo "New record created successfully";
