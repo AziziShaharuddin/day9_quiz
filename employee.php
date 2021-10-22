@@ -22,7 +22,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT clockin_id, username, datetime FROM attendance_login;";
+$sql = "SELECT clockin_id, username, datetime FROM attendance_log;";
 // $result = mysqli_query($conn, $sql);
 
 $result = $conn->query($sql);

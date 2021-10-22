@@ -1,6 +1,4 @@
-<?php
-    include 'attendance_login.php';
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +10,7 @@
 </head>
 <body>
     <h3>Please login</h3>
-    <form action="employee_login.php" method="post">
+    <form action="attendance_login.php" method="post">
         <label for="">Username/email: </label>
         <input type="text" name="name"><br>
         <label for="">Password: </label>
@@ -20,13 +18,13 @@
         <button>I'm here!</button>
     </form>
     <?php
-        $name = $_POST["name"];
-        $password = $_POST["password"];
-        if($name != "" && $password != ""){
-            echo "You have clocked in!";
-        } else {
-            echo '<script>alert("Please key in your details")</script>';
-        }
+        // $name = $_POST["name"];
+        // $password = $_POST["password"];
+        // if($name != "" && $password != ""){
+        //     echo "You have clocked in!";
+        // } else {
+        //     echo '<script>alert("Please key in your details")</script>';
+        // }
     ?>
 </body>
 </html>

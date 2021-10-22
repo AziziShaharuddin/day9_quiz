@@ -18,8 +18,14 @@ $password = $_POST["password"];
 $sql = "INSERT INTO attendance_log (username, password)
 VALUES ('$name', '$password');";
 
-// if ($conn->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+if($name != "" && $password != ""){
+  echo "You have clocked in!";
+} else {
+  echo '<script>alert("Please key in your details")</script>';
+}
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
