@@ -16,7 +16,7 @@ $name = $_POST["name"];
 $password = $_POST["password"];
 
 $sql = "INSERT INTO attendance_log (username, password)
-VALUES ('$name', '$password')";
+VALUES ('$name', '$password');";
 
 // if ($conn->query($sql) === TRUE) {
 //   echo "New record created successfully";
