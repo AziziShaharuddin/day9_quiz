@@ -25,6 +25,7 @@ if ($conn->connect_error) {
 $sql = "SELECT clockin_id, username, datetime FROM attendance_log;";
 // $result = mysqli_query($conn, $sql);
 
+//$result variable is to call the query function, and the input is the variable yang kita set
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

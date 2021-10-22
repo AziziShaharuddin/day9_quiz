@@ -14,9 +14,10 @@ if ($conn->connect_error) {
 
 $name = $_POST["name"];
 $password = $_POST["password"];
+$hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
 $sql = "INSERT INTO attendance_log (username, password)
-VALUES ('$name', '$password');";
+VALUES ('$name', '$hashed_password');";
 
 if($name != "" && $password != ""){
   echo "You have clocked in!";
